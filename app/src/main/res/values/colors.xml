@@ -57,4 +57,8 @@
     <color name="md_lime_A400">#C6FF00</color>
     <color name="md_lime_A700">#AEEA00</color>
 
+
+    <color name="color_red">#FFFA120E</color>
+    <color name="color_light_blue">#3cf</color>
+
 </resources>

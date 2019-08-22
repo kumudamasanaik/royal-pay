@@ -5,6 +5,12 @@ buildscript {
     ext.retrofit2Ver='2.4.0'
     ext.okhttp3Ver = '3.10.0'
     ext.stethoVer = '1.5.0'
+
+    /*added by me*/
+    ext.leakcanary = '1.6.1'
+    ext.supportLibVersion = "27.1.1"
+    ext.constraintLayout = '1.1.2'
+
     repositories {
         google()
         jcenter()
