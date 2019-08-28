@@ -1,5 +1,37 @@
 <resources>
     <string name="app_name">RoyalPay</string>
     <string name="empty_result">No Data to display !</string>
+    <string name="tx_credential_code">Credential Code</string>
+    <string name="tx_nonce_string">Nonce String</string>
+    <string name="tx_timestamp">Timestamp</string>
+    <string name="tx_sign">Sign</string>
+    <string name="please_wait">Please Wait</string>
+
+
+    <!--Error messages-->
+    <string name="error_no_internet">Please check your internet connection!</string>
+    <string name="err_please_enter_valid_firstname">Please enter firstname</string>
+    <string name="err_please_enter_valid_lastname">Please enter lastname</string>
+    <string name="err_please_enter_gender">Please select gender</string>
+    <string name="err_please_enter_valid_email">Please enter valid email</string>
+    <string name="err_please_enter_valid_mobile">Please enter valid mobile number</string>
+    <string name="err_please_enter_valid_pass">Password must contain atleast 6 Characters</string>
+    <string name="err_conf_pass_match">Confirm Password should match with Password</string>
+    <string name="err_old_pass">Please enter old Password</string>
+    <string name="err_please_enter_valid_bank_acc_num">Please enter valid account bank number</string>
+    <string name="err_please_enter_valid_ifsc_code">Please enter valid ifsc code</string>
+    <string name="enter_valid_otp">Enter Proper otp</string>
+    <string name="Whoops_Something_went_wrong">Whoops! Something went wrong !!</string>
+    <string name="passwrd_changed_successfully">password changed successfully</string>
+    <string name="do_u_want_to_logout">Are you sure you want to logout?</string>
+    <string name="do_you_want_to_cancel_order">Are you sure you want to Cancel order?</string>
+    <string name="do_you_want_to_return_order">Are you sure you want to Return order?</string>
+
+
+    <string name="err_please_enter_valid_partner_code">Please enter Partner code</string>
+    <string name="err_please_enter_valid_credential_code">Please enter credential code</string>
+    <string name="err_please_enter_valid_nonce_string">Please enter NonceString</string>
+    <string name="err_please_enter_valid_time_stamp">Please enter TimeStamp</string>
+    <string name="tx_required">Required !!</string>
 
 </resources>

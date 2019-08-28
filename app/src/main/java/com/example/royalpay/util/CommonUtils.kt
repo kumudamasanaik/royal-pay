@@ -1,6 +1,11 @@
 package com.example.royalpay.util
 
 import android.app.ProgressDialog
+import android.content.Context
+import android.content.Intent
+import android.os.Bundle
+import android.text.Editable
+import com.example.royalpay.R
 import com.example.royalpay.constants.Constants
 import com.example.royalpay.listener.ISelectedDateListener
 import java.text.SimpleDateFormat
@@ -55,13 +60,57 @@ class CommonUtils {
         }
 
 
+        fun startActivity(mContext: Context, activity: Class<*>, bundle: Bundle) {
+            val move = Intent(mContext, activity)
+            move.putExtras(bundle)
+            mContext.startActivity(move)
+        }
+
+        fun setCustomerPassword(pass: String) {
+            SharedPreferenceManager.setPrefVal(Constants.PASSWORD, pass, SharedPreferenceManager.VALUE_TYPE.STRING)
+        }
+
+        fun saveNonce(oauth_nonce: String){
+            SharedPreferenceManager.setPrefVal(Constants.NONCE_STRING, oauth_nonce, SharedPreferenceManager.VALUE_TYPE.STRING)
+        }
+
+        fun saveUnixTime(unixTime: String) {
+            SharedPreferenceManager.setPrefVal(Constants.UNIX_TIME_SRAP, unixTime, SharedPreferenceManager.VALUE_TYPE.STRING)
+        }
+
         fun saveOtpVerificationHashKey(otpStaticKey: String) {
             SharedPreferenceManager.setPrefVal(
                 SharedPreferenceManager.OTP_VERIFICATION_KEY,
                 otpStaticKey,
                 SharedPreferenceManager.VALUE_TYPE.STRING
             )
+        }
 
+
+        fun hideLoading() {
+            myProgressDialog?.apply {
+                if (isShowing) {
+                    dismiss()
+                    myProgressDialog = null
+                }
+            }
+        }
+
+        fun showLoading(mContext: Context, cancelable: Boolean = false) {
+            try {
+                hideLoading()
+                myProgressDialog = ProgressDialog(mContext, R.style.AppTheme_Loading_Dialog)
+                myProgressDialog?.apply {
+                    setMessage(mContext.getString(R.string.please_wait))
+                    setCancelable(true)
+                    setOnCancelListener {
+                        dismiss()
+                    }
+                    show()
+                }
+            } catch (ex: Exception) {
+                ex.printStackTrace()
+            }
         }
     }
 }

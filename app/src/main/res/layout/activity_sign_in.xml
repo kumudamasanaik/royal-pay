@@ -4,7 +4,7 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ui.SignInActivity"
+        tools:context=".ui.LogInActivity"
         android:orientation="vertical"
         android:background="@color/colorWhite"
         android:layout_margin="@dimen/dimens_12">
@@ -13,43 +13,86 @@
             style="@style/textviewstyle"/>
 
     <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/ed_partner_code"
             android:layout_marginTop="@dimen/dimens_5"
             android:layout_marginBottom="@dimen/dimens_10"
             style="@style/editTextViewStyle"/>
 
     <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/first_tx_error_requires"
             style="@style/textviewstyle"
-            android:text="credential Code"/>
+            android:textSize="@dimen/dimens_10sp"
+            android:text="@string/tx_required"
+            android:textColor="@color/md_red_900"
+            android:visibility="gone"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textviewstyle"
+            android:text="@string/tx_credential_code"/>
 
     <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/ed_credential_code"
             android:layout_marginTop="@dimen/dimens_5"
             style="@style/editTextViewStyle"
             android:layout_marginBottom="@dimen/dimens_10"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-            android:text="Nonce String"
+            android:id="@+id/second_tx_error_requires"
+            style="@style/textviewstyle"
+            android:textSize="@dimen/dimens_10sp"
+            android:text="@string/tx_required"
+            android:textColor="@color/md_red_900"
+            android:visibility="gone"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+            android:text="@string/tx_nonce_string"
             style="@style/textviewstyle"/>
 
     <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/ed_nonce_string"
             android:layout_marginTop="@dimen/dimens_5"
             style="@style/editTextViewStyle"
             android:layout_marginBottom="@dimen/dimens_10"/>
 
     <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/third_tx_error_requires"
             style="@style/textviewstyle"
-            android:text="Timestamp"/>
+            android:textSize="@dimen/dimens_10sp"
+            android:text="@string/tx_required"
+            android:textColor="@color/md_red_900"
+            android:visibility="gone"/>
 
-    <androidx.appcompat.widget.AppCompatEditText
-            android:layout_marginTop="@dimen/dimens_5"
-            style="@style/editTextViewStyle"
-            android:layout_marginBottom="@dimen/dimens_35"/>
+    <androidx.appcompat.widget.AppCompatTextView
+            style="@style/textviewstyle"
+            android:text="@string/tx_timestamp"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/dimens_35">
+        <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/ed_time_stamp"
+                android:layout_marginTop="@dimen/dimens_5"
+                style="@style/editTextViewStyle"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fourth_tx_error_requires"
+                style="@style/textviewstyle"
+                android:textSize="@dimen/dimens_10sp"
+                android:visibility="gone"
+                android:text="@string/tx_required"
+                android:textColor="@color/md_red_900"/>
+
+    </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sign_in"
             android:layout_width="@dimen/dimens_80"
             android:layout_height="@dimen/dimens_50"
-            android:text="Sign"
+            android:text="@string/tx_sign"
             android:textColor="@color/colorWhite"
-            android:textSize="@dimen/dimens_18"
+            android:textSize="@dimen/dimens_18sp"
             android:textAllCaps="false"
             android:background="@drawable/btn_background"/>
 

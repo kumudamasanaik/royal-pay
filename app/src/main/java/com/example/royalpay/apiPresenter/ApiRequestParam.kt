@@ -15,13 +15,14 @@ object ApiRequestParam {
     }
 
     /*LOGIN SCREEN */
-    fun login(email: String, password: String): JsonObject {
+    fun login(partnerCode: String, credentialCode: String, nonceString: String, timeStamp: String): JsonObject {
         respParamObj = JsonObject()
         respParamObj.apply {
-           /* addProperty(Constants.email, email)
-            addProperty(Constants.password, password)*/
+            addProperty(Constants.PARTNER__CODE, partnerCode)
+            addProperty(Constants.CREDENTIAL_CODE, credentialCode)
+            addProperty(Constants.NONCE_STRING, nonceString)
+            addProperty(Constants.TIMESTAMP, timeStamp)
         }
         return respParamObj
     }
-
 }
